@@ -3,7 +3,6 @@
 angular.module('dragNDropV2App')
 .controller('UploadCtrl', ['$scope', function ($scope) {
   var vm = this;
-
   vm.uploadFile = function (event){
     var files = event.target.files;
     var reader = new FileReader ();
@@ -11,13 +10,6 @@ angular.module('dragNDropV2App')
       var item = URL.createObjectURL(files[i]);
       vm.images.push(item);
     };
+    $scope.$apply();
   };
-
-  // $scope.$watch(angular.bind(vm, function () {
-  //   return vm.images;
-  // }), function (newVal, oldVal) {
-  //   console.log(newVal);
-  //   console.log(oldVal);
-  // },true);
-
 }])
