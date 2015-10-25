@@ -6,7 +6,7 @@ angular.module('dragNDropV2App')
   vm.images = [];
 
   if (galleryConfigService.storageName) {
-    var filesDataUrl = angular.fromJson(localStorage.img);
+    var filesDataUrl = angular.fromJson(localStorage.img); 
     vm.images = filesDataUrl || [];
   }
 });

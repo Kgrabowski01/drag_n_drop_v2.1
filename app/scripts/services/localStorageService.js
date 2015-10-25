@@ -6,7 +6,7 @@
   localStorageService.$inject = [];
 
   function localStorageService () {
-    
+
     var base64LocalStorageArray = [];
 
     return {
@@ -18,7 +18,6 @@
       var imgLocalStor = storageName;
       base64LocalStorageArray.push(tempUrl);
       localStorage.setItem(imgLocalStor, JSON.stringify(base64LocalStorageArray));
-      console.log (base64LocalStorageArray)
     };
   };
 })();
